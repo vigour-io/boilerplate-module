@@ -64,7 +64,7 @@ Use semver all the way this means
 - `0.x.0` *minor* for added features
 - `0.0.x` *patch* for internal changes or bug fixes
 
-allways use the carret `^2.0.0` for dependencies, this update minor and patch version automaticly
+allways use the carret `^2.0.0` for dependencies, this updates minor and patch version automaticly
 
 -
 ###Naming
@@ -86,7 +86,7 @@ The properties field is used to add property definitions for certain keys within
 -
 ###Browser
 - css, use postcssify
-- Try to use browser apis whenever its possible, shim the browser api if its not aviable
+- Try to use browser apis whenever its possible, shim the browser api if its not available
 - Use feature detection in browsers
 
 -
