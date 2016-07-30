@@ -6,21 +6,16 @@
 
 A boilerplate of how to do modules
 - code
-- modules
 - versioning
-- configuration
-- tests
-- readme
-- server
-- browser
-- directory structure
 - naming
+- directory
+- tests
+- browser
+- server
+- modules
+- configuration
 - deployment
-  - travis
-  - coverage
-  - browserstack
-  - now
-  - npm
+- readme
 
 -
 ###Code
@@ -72,6 +67,19 @@ Use semver all the way this means
 allways use the carret `^2.0.0` for dependencies, this update minor and patch version automaticly
 
 -
+###Naming
+Try to be broing but concise with names for example `play-state-content`
+- `play`, the product the module is part of
+- `state`, the subtopic (state)
+- `content`, the specific funcitonality
+
+-
+###Directory
+Use a `lib` folder
+In test if tests are reusable use a `fn.js` file
+Try to split up files based on funcitonality
+
+-
 ###Tests
 The properties field is used to add property definitions for certain keys within set objects.
 
@@ -119,13 +127,6 @@ Use envivfy to expose environment variables in your module in the browser
 ```
 
 -
-###Naming
-Try to be broing but concise with names for example `play-state-content`
-- `play`, the product the module is part of
-- `state`, the subtopic (state)
-- `content`, the specific funcitonality
-
--
 ###deployment
   - travis
   - coverage
@@ -149,7 +150,7 @@ const something = somemodule()
 something.do() // → 'doing somehting'
 ```
 
-Try to keep text to a minimum -- code is usualy the best documentation
+Try to keep text to a minimum, code is usualy the best documentation
 
 **Code examples**
 
