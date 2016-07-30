@@ -1,0 +1,51 @@
+@import "@vigour-io/css";
+
+:root {
+  --seekbar-button-size: 10px;
+  --seekbar-height: 6px;
+  --seekbar-active: var(--player-active);
+}
+
+.play-player-controls > .seekbar {
+  flex:1;
+  display: flex;
+  align-items: center;
+
+  & > .seek {
+    width: 100%;
+    border-radius: calc(var(--seekbar-height) / 2);
+    background-color: rgba(255, 255, 255, 0.5);
+
+    & > .bar {
+      width: 0;
+      position: relative;
+      background-color: var(--seekbar-active);
+      height: var(--seekbar-height);
+      border-radius: calc(var(--seekbar-height) / 2);
+      min-width: calc(var(--seekbar-height) / 2);
+
+      & > .button {
+        width: var(--seekbar-button-size);
+        height: var(--seekbar-button-size);
+        background-color: var(--seekbar-active);
+        position: absolute;
+        right: calc(var(--seekbar-button-size) / -2);
+        top:0;
+        bottom:0;
+        margin: auto;
+        border-radius: calc(var(--seekbar-button-size) / 2);
+      }
+    }
+  }
+}
+
+.advertisement .play-player-controls > .seekbar {
+  display: none;
+}
+
+.phone.ios:not(.cordova) .play-player-controls > .seekbar {
+  pointer-events: none !important;
+  & > .seek > .bar > .button {
+    display: none;
+  }
+}

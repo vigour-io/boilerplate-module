@@ -1,0 +1,67 @@
+@import "@vigour-io/css";
+
+:root {
+  --player-controls: var(--player);
+  --player-controls-contrast: var(--player-contrast);
+  --player-controls-opacity: 10%;
+
+  --player-controls-height: 54px;
+  --player-controls-font-size: var(--h7);
+}
+
+.play-player-controls {
+  transform: translate3d(0, 0, 1px);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 7.5px;
+  box-sizing: border-box;
+  color: var(--player-controls);
+
+  & > div,
+  & > i {
+    padding: 0 7.5px;
+    line-height: var(--player-controls-height);
+    height: var(--player-controls-height);
+    pointer-events: auto;
+  }
+
+  & > i,
+  & > .volume,
+  & > .seekbar {
+    cursor: pointer;
+  }
+
+  & > i {
+    font-size: 2.8rem;
+  }
+
+  & > .bg {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: color(
+      var(--player-controls-contrast)
+      alpha(var(--player-controls-opacity))
+    );
+  }
+
+  & .ad-overlay {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - var(--player-controls-height));
+  }
+}
+
+.tablet, .phone, .desktop {
+  & .play-player-controls {
+    transition: opacity 0.3s;
+  }
+}

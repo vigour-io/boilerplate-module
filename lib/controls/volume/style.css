@@ -1,0 +1,23 @@
+@import "@vigour-io/css";
+
+.play-player-controls > .volume {
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+
+  & > div {
+    height: 24px;
+    width: 3px;
+    background-color: var(--player-active);
+
+    &:hover ~ div {
+      opacity: .5;
+    }
+
+    &.inactive {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

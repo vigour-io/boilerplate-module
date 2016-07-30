@@ -1,0 +1,7 @@
+.play-player-controls > .duration {
+  font-size: var(--player-controls-font-size);
+}
+
+.advertisement .play-player-controls > .duration {
+  display: none;
+}

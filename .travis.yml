@@ -1,0 +1,12 @@
+# .travis.yml
+language: node_js
+git:
+  depth: 1
+matrix:
+  include:
+  - node_js: '6.3'
+    script: npm run browserstack
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+notifications:
+  email: false
