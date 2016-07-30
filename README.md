@@ -53,16 +53,16 @@ When there is a difference between the browser and node use the browserify-brows
 - Use streams as much as possible when working in node (chunk based operation)
 - When using promises make sure you catch errors!
 - When using `vigour-base` use inject with plain objects
-- When using generators make sure they run in the browser there is a util in `vigour-util/regenerator
+- When using generators make sure they run in the browser there is a util in `vigour-util/regenerator`
 - When using es7 make sure it works in node as well (by babelifying your code)
 - Use `camelCase` for variable names or properties (dont use `something_else` for example)
 
 -
 ###Versioning
 Use semver all the way this means
-`x.0.0` ) *major*  api changes
-`0.x.0` *minor* for added features
-`0.0.x` *patch* for internal changes or bug fixes
+- `x.0.0` *major*  api changes
+- `0.x.0` *minor* for added features
+- `0.0.x` *patch* for internal changes or bug fixes
 
 allways use the carret `^2.0.0` for dependencies, this update minor and patch version automaticly
 
