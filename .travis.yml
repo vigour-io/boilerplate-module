@@ -8,12 +8,18 @@ matrix:
     script: npm run travis
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+  - echo "{ "email": "jim@vigour.io", "token": \"${NOW_TOKEN}\"" }" > .now.json
 notifications:
   email: false
 deploy:
-  provider: npm
-  email: jim@vigour.io
-  api_key: ${NPM_TOKEN}
-  on:
-    branch: master
-    tags: true
+  - provider: npm
+    email: jim@vigour.io
+    api_key: ${NPM_TOKEN}
+    on:
+      branch: master
+      tags: true
+  - provider: script
+    script: now -N
+    on:
+      branch: master
+      tags: true
