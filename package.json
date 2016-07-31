@@ -13,7 +13,7 @@
     "url": "https://github.com/vigour-io/boilerplate-module/issues"
   },
   "scripts": {
-    "deploy": "echo bla",
+    "deploy": "echo blaaaaar",
     "start": "node bin/server.js",
     "test": "(ducktape; node test) | tap-difflet && standard",
     "standard": "standard",
