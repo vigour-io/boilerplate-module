@@ -14,6 +14,8 @@ A boilerplate of how to do modules
 - configuration
 - versioning
 - naming
+- installation
+- committing
 - publishing
 - readme
 
