@@ -22,7 +22,7 @@ A boilerplate of how to do modules
 
 -
 ###Prerequisite
-Before you start doing development @ vigour be sure you have knowledge about
+Before you start be sure you have knowledge about
 - [node.js 6.3](http://nodeschool.io/)
 - [es6](https://github.com/lukehoban/es6features)
 - [browserify](http://browserify.org/articles.html)
