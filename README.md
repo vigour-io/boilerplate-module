@@ -86,8 +86,14 @@ Create tests using
 
 In test if tests are reusable use a `fn.js` file wrapping the tests in a function
 
+When using browserstack you need to set the environment vars `BROWSERSTACK_USERNAME=${username}` and `BROWSERSTACK_KEY=${key}`. Set these both locally and in your projects Travis settings.
+
+For npm you need to set `NPM_TOKEN` environment variable in Travis
+
+For now you need to set `NOW_TOKEN` environment variable in Travis
 
 - Enable your repo in travis by going to the [pubic-profile](https://travis-ci.org/profile/vigour-io) for public modules and the [private profile](https://travis-ci.com/profile/vigour-io) for private modules, then click the sync button and check the box for your repo
+- Set enviroment variables in travis in the [repo settings](https://travis-ci.org/vigour-io/boilerplate-module/settings)
 - Enable coveralls.io by going to [add new repo](https://coveralls.io/repos/new)
 - Test as if you're working against a blackbox, you're tests need to do the same as users of modules
 don't tests internals test api with results (input - output), this allows you to refactor code many times and does not get you lost with too many tests
@@ -96,9 +102,9 @@ don't tests internals test api with results (input - output), this allows you to
 - When developing start makeing unit tests, this is your spec from there you can start building the app code, see tests as the tool you develop with, this pattern is called [TDD](https://www.agilealliance.org/glossary/tdd/)
 - Use `npm run watch` (located in the script folder) for fast development in node
 - Use `npm run watch-browser` to develop for the browser
+- When you have a server, do deploys trough travis by now after tests pass
 
-When using browserstack you need to set the environment vars `BROWSERSTACK_USERNAME=${username}` and `BROWSERSTACK_KEY=${key}`. Set these both locally and in your projects Travis settings.
-
+-
 ###Browser
 Browsers should be able to run allmost all code, universal modules using browserify
 - Use feature detection in browsers
