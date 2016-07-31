@@ -20,8 +20,7 @@ A boilerplate of how to do modules
 - publishing
 - readme
 
-
--
+--
 ###Prerequisite
 Before you start be sure you have knowledge about
 - [node.js 6.3](http://nodeschool.io/)
@@ -30,7 +29,7 @@ Before you start be sure you have knowledge about
 - [github](https://guides.github.com/activities/hello-world/)
 
 
--
+--
 ###Code
 Use [jstandard as code style](http://standardjs.com/).
 
@@ -77,7 +76,7 @@ When there is a difference between the browser and node use the browserify-brows
 - Don't overcomlicate things with reusability, as a rule of thumb when something is done 3 times make something for it but not before
 
 
--
+--
 ###Directory
 Always use a `lib` folder, with the `./lib/index.js` as a main file
 
@@ -120,7 +119,7 @@ don't tests internals test api with results (input - output), this allows you to
 - When you have a server, do deploys trough travis by now after tests pass
 
 
--
+--
 ###Browser
 Browsers should be able to run allmost all code, universal modules using browserify
 - Use feature detection in browsers
@@ -149,7 +148,7 @@ At the start of your script add
 require('vigour-util/require')()
 ```
 
--
+--
 ###Server
 To start a server use `npm start` with no arguments
 To launch a server for testing puposes you can use [now](https://zeit.co/now), they map port 80 to https by default.
@@ -162,7 +161,7 @@ To launch a server for testing puposes you can use [now](https://zeit.co/now), t
 - If you want a server that has to be redeployed on push (continous delivery), redploy your service from `travis-ci` after tests pass using `now`, this can be done on the same location as publishing your module
 
 
--
+--
 ###Modules
 Always use specific modules e.g. `lodash.merge` vs `lodash`
 When you find a module make sure it works in `node 6.3`, and does not add too much code in the browser
@@ -198,7 +197,7 @@ Use envivfy to expose environment variables in your module in the browser
 }
 ```
 
--
+--
 ###Versioning
 Use semver all the way this means
 - `x.0.0` *major*  api changes
@@ -216,7 +215,7 @@ Try to be broing but concise with names `play-state-content`
 
 Extensions of modules always folow the same pattern e.g. `blend-state-content-brightcove` extends or replaces `play-state-content` This will keep reasoning about behaviours of modules simple for everyone
 
--
+--
 ###Installation
 Modules should always be installable using
 `npm i` or `npm i --production` (wihtout dev dependencies)
@@ -225,7 +224,7 @@ Modules should always be installable using
 ###Commiting
 Commit to feature branches, there is no develop branch only master and feature, use pull requests even to yourself to merge features into master. Similair model as git flow, minus the develop branch. Reason to remove a devleop branch is to get less version disparity
 
--
+--
 ###Publishing
 Publishing of modules has to be done trough [travis-ci](https://docs.travis-ci.com/user/deployment/npm), make sure you setup an npm api-key in travis-ci as an enviroment variable so it can publish.
 
