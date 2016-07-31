@@ -54,7 +54,7 @@ When there is a difference between the browser and node use the browserify-brows
 - Use `val` as a word vs `value`
 - Always add `use strict` on top of your js files
 - Try to create small concise functions preferbly split up into many files
-- Use streams as much as possible when working in node (chunk based operation)
+- Use streams as much as possible when working in node (chunk based operation), to learn about streams check [stream-adventure](https://github.com/substack/stream-adventure)
 - When using promises make sure you catch errors!
 - When using `vigour-base` use inject with plain objects
 - When using generators make sure they run in the browser there is a util in `vigour-util/regenerator`
