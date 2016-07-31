@@ -78,11 +78,17 @@ Create tests using
 - [tap + tape](https://github.com/vigour-io/base/blob/master/test/compute.js), read this [article](https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4#.wly1efig4) for why tap.
 - [precommit hook](https://www.npmjs.com/package/pre-commit), helps with avoiding broken commits
 - [browserstack](https://github.com/vigour-io/boilerplate-module/blob/master/test/browserstack.json)
-- coveralls.io
+- [coveralls.io](https://coveralls.io/), when making a private module make sure to add a [.coveralls.yml](https://github.com/vigour-io/play-state-geo/blob/master/.coveralls.yml) file
 - [travis-ci](https://github.com/vigour-io/boilerplate-module/blob/master/.travis.yml)
 
-In test if tests are reusable use a `fn.js` file
+In test if tests are reusable use a `fn.js` file wrapping the tests in a function
 
+- Test as if youre working against a blackbox, youre tests need to do the same as users of modules
+don't tests internals test api with results (input - output), this allows you to refactor code many times and does not get you lost with too many tests
+- Do not tests things that are not part of your module e.g `module a` uses `module b`, do not test the funcionality of `module b`, do this in `module b`. This keeps tests concise and more valuable
+- Coverage is an indicator of normal tests as a rule of thumb when you have 90% coverage it shows that there are some tests. Beware, coverage does not mean that your tests are any good!
+- When developing start makeing unit tests, this is your spec from there you can start building the app code, see tests as the tool you develop with, this pattern is called [TDD](https://www.agilealliance.org/glossary/tdd/)
+-
 
 -
 ###Browser
@@ -114,6 +120,14 @@ require('vigour-util/require')()
 
 -
 ###Server
+To start a server use `npm start` with no arguments
+To launch a server for testing puposes you can use `now`, they map port 80 to https by default.
+
+- Do not add to many arguments to your start script, in general having one argument that is the port should be enough for development
+- Prefer errors over logs, throw Errors. In most cases where you use`vigour-state` the whole state will be stored in a database, this means every error is reproducable by replaying the history
+- Dont add too many `dev-tools` to your server, custom cli tools, too many fancy colorts in the console
+- For notifications make a slack channel for your service (e.g. service crashed, new version launched)
+- If you want a server that has to be redeployed on push (continous delivery), redploy your service from `travis-ci` after tests pass using `now`, this can be done on the same location as publishing your module
 
 -
 ###Modules
@@ -127,6 +141,7 @@ Prefer plain simple javascript, micro modules are ok as long as they do 1 thing 
 - `express` use plain old `http`
 - `hyperquest` use plain old `http`
 - `request` use plain old `http`
+- All modules that "help" with logging for the server
 
 **prefered**
 - `uWebsocket` over `ws` or `websocket` (`uWebsocket` is by fat the fastest)
@@ -171,6 +186,10 @@ Extensions of modules allways folow the same pattern e.g. `blend-state-content-b
 ###Installation
 Modules should allways be installable using
 `npm i` or `npm i --production` (wihtout dev dependencies)
+
+-
+###Commiting
+Commit to feature branches, there is no develop branch only master and feature, use pull requests even to yourself to merge features into master. Similair model as git flow, minus the develop branch. Reason to remove a devleop branch is to get less version disparity
 
 -
 ###Publishing
