@@ -80,6 +80,7 @@ Create tests using
 - [browserstack](https://github.com/vigour-io/boilerplate-module/blob/master/test/browserstack.json)
 - [coveralls.io](https://coveralls.io/), when making a private module make sure to add a [.coveralls.yml](https://github.com/vigour-io/play-state-geo/blob/master/.coveralls.yml) file
 - [travis-ci](https://github.com/vigour-io/boilerplate-module/blob/master/.travis.yml)
+- [ducktape](https://www.npmjs.com/package/ducktape), a tool to test for common gotchas
 
 In test if tests are reusable use a `fn.js` file wrapping the tests in a function
 
@@ -88,7 +89,8 @@ don't tests internals test api with results (input - output), this allows you to
 - Do not tests things that are not part of your module e.g `module a` uses `module b`, do not test the funcionality of `module b`, do this in `module b`. This keeps tests concise and more valuable
 - Coverage is an indicator of normal tests as a rule of thumb when you have 90% coverage it shows that there are some tests. Beware, coverage does not mean that your tests are any good!
 - When developing start makeing unit tests, this is your spec from there you can start building the app code, see tests as the tool you develop with, this pattern is called [TDD](https://www.agilealliance.org/glossary/tdd/)
--
+- Use `npm run watch` (located in the script folder) for fast development in node
+- Use `npm run watch-browser` to develop for the browser
 
 -
 ###Browser
