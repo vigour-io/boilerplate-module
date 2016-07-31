@@ -8,7 +8,7 @@ matrix:
     script: echo "hello"
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
-  - echo "{ "email": "jim@vigour.io", "token": \"${NOW_TOKEN}\" }" > .now.json
+  - echo "{\"email\":\"jim@vigour.io\",\"token\":\"${NOW_TOKEN}\"}" > .now.json
 notifications:
   email: false
 deploy:
