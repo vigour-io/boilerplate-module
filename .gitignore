@@ -23,3 +23,6 @@ README.html
 coverage
 browserstack.json
 browserstack-run.pid
+.now.json
+temp.yml
+_package.json
