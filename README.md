@@ -20,6 +20,7 @@ A boilerplate of how to do modules
 - publishing
 - readme
 
+
 -
 ###Prerequisite
 Before you start be sure you have knowledge about
@@ -27,6 +28,7 @@ Before you start be sure you have knowledge about
 - [es6](https://github.com/lukehoban/es6features)
 - [browserify](http://browserify.org/articles.html)
 - [github](https://guides.github.com/activities/hello-world/)
+
 
 -
 ###Code
@@ -74,6 +76,7 @@ When there is a difference between the browser and node use the browserify-brows
 - When using `vigour-base` use inject with plain objects
 - Don't overcomlicate things with reusability, as a rule of thumb when something is done 3 times make something for it but not before
 
+
 -
 ###Directory
 Always use a `lib` folder, with the `./lib/index.js` as a main file
@@ -116,6 +119,7 @@ don't tests internals test api with results (input - output), this allows you to
 - Use `npm run watch-browser` to develop for the browser
 - When you have a server, do deploys trough travis by now after tests pass
 
+
 -
 ###Browser
 Browsers should be able to run allmost all code, universal modules using browserify
@@ -157,6 +161,7 @@ To launch a server for testing puposes you can use [now](https://zeit.co/now), t
 - For notifications make a slack channel for your service (e.g. service crashed, new version launched)
 - If you want a server that has to be redeployed on push (continous delivery), redploy your service from `travis-ci` after tests pass using `now`, this can be done on the same location as publishing your module
 
+
 -
 ###Modules
 Always use specific modules e.g. `lodash.merge` vs `lodash`
@@ -174,6 +179,7 @@ Prefer plain simple javascript, micro modules are ok as long as they do 1 thing 
 **prefered**
 - `uWebsocket` over `ws` or `websocket` (`uWebsocket` is by fat the fastest)
 - `vigour-ua` for ua sniffing/device info (its a small module ~1kb)
+
 
 -
 ###Configuration
