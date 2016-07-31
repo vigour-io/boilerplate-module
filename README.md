@@ -102,8 +102,6 @@ In test if tests are reusable use a `fn.js` file wrapping the tests in a functio
 
 When using browserstack you need to set the environment vars `BROWSERSTACK_USERNAME=${username}` and `BROWSERSTACK_KEY=${key}`. Set these both locally and in your projects Travis settings.
 
-For npm you need to set `NPM_TOKEN` environment variable in Travis
-
 For now you need to set `NOW_TOKEN` environment variable in Travis
 
 - Enable your repo in travis by going to the [pubic-profile](https://travis-ci.org/profile/vigour-io) for public modules and the [private profile](https://travis-ci.com/profile/vigour-io) for private modules, then click the sync button and check the box for your repo
