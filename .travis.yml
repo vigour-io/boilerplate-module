@@ -13,6 +13,6 @@ notifications:
   email: false
 deploy:
   provider: script
-  script: script
+  script: script.sh
   on:
     branch: master
