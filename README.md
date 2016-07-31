@@ -51,15 +51,18 @@ When there is a difference between the browser and node use the browserify-brows
 }
 ```
 
+**requirements**
 - Use `val` as a word vs `value`
 - Always add `use strict` on top of your js files
+- When using promises make sure you catch errors!
+- When using generators make sure they run in the browser there is a util in `vigour-util/regenerator`
+- Use `camelCase` for variable names or properties (dont use `something_else` for example)
+- When using es7 make sure it works in node as well (by babelifying your code)
+
+**recommendations**
 - Try to create small concise functions preferbly split up into many files
 - Use streams as much as possible when working in node (chunk based operation), to learn about streams check [stream-adventure](https://github.com/substack/stream-adventure)
-- When using promises make sure you catch errors!
 - When using `vigour-base` use inject with plain objects
-- When using generators make sure they run in the browser there is a util in `vigour-util/regenerator`
-- When using es7 make sure it works in node as well (by babelifying your code)
-- Use `camelCase` for variable names or properties (dont use `something_else` for example)
 - Don't overcomlicate things with reusability, as a rule of thumb when something is done 3 times make something for it but not before
 
 -
