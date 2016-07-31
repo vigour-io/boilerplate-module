@@ -22,4 +22,3 @@ deploy:
     script: now -N
     on:
       branch: master
-      tags: true
