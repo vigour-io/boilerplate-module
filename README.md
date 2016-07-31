@@ -1,8 +1,8 @@
 # vigour-boilerplate-module
-[![Build Status](https://travis-ci.org/vigour-io/base.svg?branch=master)](https://travis-ci.org/vigour-io/base)
+[![Build Status](https://travis-ci.org/vigour-io/boilerplate-module.svg?branch=master)](https://travis-ci.org/vigour-io/boilerplate-module)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![npm version](https://badge.fury.io/js/vigour-base.svg)](https://badge.fury.io/js/vigour-base)
-[![Coverage Status](https://coveralls.io/repos/github/vigour-io/base/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/base?branch=master)
+[![npm version](https://badge.fury.io/js/vigour-boilerplate-module.svg)](https://badge.fury.io/js/vigour-base)
+[![Coverage Status](https://coveralls.io/repos/github/vigour-io/boilerplate-module/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/boilerplate-module?branch=master)
 
 A boilerplate of how to do modules
 - code
