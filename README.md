@@ -86,9 +86,31 @@ In test if tests are reusable use a `fn.js` file
 
 -
 ###Browser
-- css, use postcssify
-- Try to use browser apis whenever its possible, shim the browser api if its not available
+Browsers should be able to run allmost all code, universal modules using browserify
 - Use feature detection in browsers
+- Make sure to test your module in multiple browsers, browserstack tests are very helpfull for this
+
+**css**
+Css4 with [postcssify](https://www.npmjs.com/package/postcssify) a transform for cssnext for browserify
+```
+"browserify": {
+  "transform": [
+    "postcssify": "^2.0.0"
+  ]
+}
+```
+
+```javascript
+'use strict'
+require('./style.css')
+```
+
+In order to run this in node wihtout crashes there is an option to use [vigour-util/require](https://www.npmjs.com/package/vigour-util#enhancerequireoptions)
+
+At the start of your script add
+```javascript
+require('vigour-util/require')()
+```
 
 -
 ###Server
@@ -144,6 +166,11 @@ Try to be broing but concise with names `play-state-content`
 - `content`, the specific funcitonality
 
 Extensions of modules allways folow the same pattern e.g. `blend-state-content-brightcove` extends or replaces `play-state-content` This will keep reasoning about behaviours of modules simple for everyone
+
+-
+###Installation
+Modules should allways be installable using
+`npm i` or `npm i --production` (wihtout dev dependencies)
 
 -
 ###Publishing
