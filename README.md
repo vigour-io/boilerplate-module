@@ -6,15 +6,15 @@
 
 A boilerplate of how to do modules
 - code
-- versioning
-- naming
 - directory
 - tests
 - browser
 - server
 - modules
 - configuration
-- deployment
+- versioning
+- naming
+- publishing
 - readme
 
 -
@@ -56,32 +56,30 @@ When there is a difference between the browser and node use the browserify-brows
 - When using generators make sure they run in the browser there is a util in `vigour-util/regenerator`
 - When using es7 make sure it works in node as well (by babelifying your code)
 - Use `camelCase` for variable names or properties (dont use `something_else` for example)
-
--
-###Versioning
-Use semver all the way this means
-- `x.0.0` *major*  api changes
-- `0.x.0` *minor* for added features
-- `0.0.x` *patch* for internal changes or bug fixes
-
-allways use the carret `^2.0.0` for dependencies, this updates minor and patch version automaticly
-
--
-###Naming
-Try to be broing but concise with names for example `play-state-content`
-- `play`, the product the module is part of
-- `state`, the subtopic (state)
-- `content`, the specific funcitonality
+- Don't overcomlicate things with reusability, as a rule of thumb when something is done 3 times make something for it but not before
 
 -
 ###Directory
-Use a `lib` folder
-In test if tests are reusable use a `fn.js` file
-Try to split up files based on funcitonality
+Allways use a `lib` folder, with the `./lib/index.js` as a main file
+
+If files are requirable as an api add entry points in the root of the repo
+```javascript
+const somemodule = require('somemodule/etc')
+```
+
+Try to split up files based on functionality, when using `vigour-base` objects use injectables for your modules
+see [observable](https://github.com/vigour-io/observable/tree/master/lib/observable)
 
 -
 ###Tests
-The properties field is used to add property definitions for certain keys within set objects.
+Test using
+- tap + tape
+- precommit hook
+- browserstack
+- travis-ci
+
+In test if tests are reusable use a `fn.js` file
+
 
 -
 ###Browser
@@ -127,20 +125,40 @@ Use envivfy to expose environment variables in your module in the browser
 ```
 
 -
-###deployment
-  - travis
-  - coverage
-  - browserstack
-  - now
-  - npm
+###Versioning
+Use semver all the way this means
+- `x.0.0` *major*  api changes
+- `0.x.0` *minor* for added features
+- `0.0.x` *patch* for internal changes or bug fixes
+
+allways use the carret `^2.0.0` for dependencies, this updates minor and patch version automaticly
+
+-
+###Naming
+Try to be broing but concise with names `play-state-content`
+- `play`, the product the module is part of
+- `state`, the subtopic (state)
+- `content`, the specific funcitonality
+
+Extensions of modules allways folow the same pattern e.g. `blend-state-content-brightcove` extends or replaces `play-state-content` This will keep reasoning about behaviours of modules simple for everyone
+
+-
+###Publishing
+Publishing of modules has to be done trough [travis-ci](https://docs.travis-ci.com/user/deployment/npm), make sure you setup an npm api-key in travis-ci as an enviroment variable so it can publish.
+
+`npm version patch`, `npm version minor`, `npm version major`
+
+Then pushing to github by doing `git push --tags`
+
+When you push a major version be sure to edit the release notes in github
 
 -
 ###Readme
-Follow the formatting in this readme.md
-Add Badges -- coveralls, travis, npm and standard
-Add a usage header
+Follow the formatting in this readme.md Add Badges, coveralls, travis, npm and standard
 
-###Usage
+Add a usage field in bold, like this
+
+**Usage**
 ```javascript
 const somemodule = require('somemodule')
 // initialize the module
@@ -164,3 +182,5 @@ myfunction() // → 'hello'
 - `:key` this is a property
 - `:reset` this is also a property
 - `:val` and another one
+
+Make sure after you publish your module to npm that the readme and description in npm does not look bad
