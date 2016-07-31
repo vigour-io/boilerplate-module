@@ -1,7 +1,7 @@
 {
   "name": "vigour-boilerplate-module",
   "description": "A boilerplate of how to do modules",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
