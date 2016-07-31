@@ -13,6 +13,7 @@
     "url": "https://github.com/vigour-io/boilerplate-module/issues"
   },
   "scripts": {
+    "start": "node bin/server.js",
     "test": "(ducktape; node test) | tap-difflet && standard",
     "standard": "standard",
     "browserstack": "browserify node_modules/browserstack-tape-reporter test -o test/bundle.js -r ./package.json:package.json && cd test && browserstack-runner | tap-difflet",
@@ -27,7 +28,11 @@
     "envify": "^3.4.0",
     "postcssify": "^2.1.1"
   },
+  "browser": {
+    "./test/fn/server/index.js": "./test/fn/server/browser.js"
+  },
   "devDependencies": {
+    "vigour-util": "^3.0.0",
     "browserstack-runner": "^0.4.4",
     "browserstack-tape-reporter": "git+https://github.com/vigour-io/browserstack-tape-reporter.git",
     "budo": "^8.2.2",
