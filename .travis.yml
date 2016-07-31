@@ -11,8 +11,3 @@ before_install:
   - echo "{ "email": "jim@vigour.io", "token": \"${NOW_TOKEN}\" }" > .now.json
 notifications:
   email: false
-deploy:
-  - provider: script
-    script: echo "yeey2"
-    on:
-      branch: master
