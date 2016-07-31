@@ -1,4 +1,4 @@
-# boilerplate-module
+# vigour-boilerplate-module
 [![Build Status](https://travis-ci.org/vigour-io/base.svg?branch=master)](https://travis-ci.org/vigour-io/base)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![npm version](https://badge.fury.io/js/vigour-base.svg)](https://badge.fury.io/js/vigour-base)
@@ -68,15 +68,18 @@ const somemodule = require('somemodule/etc')
 ```
 
 Try to split up files based on functionality, when using `vigour-base` objects use injectables for your modules
-see [observable](https://github.com/vigour-io/observable/tree/master/lib/observable)
+- See [observable](https://github.com/vigour-io/observable/tree/master/lib/observable) for injectables
+- Files should not be longer then 200 lines of code
+- Line width should have a maximum of 100 characters
 
 -
 ###Tests
-Test using
-- tap + tape
-- precommit hook
-- browserstack
-- travis-ci
+Create tests using
+- [tap + tape](https://github.com/vigour-io/base/blob/master/test/compute.js), read this [article](https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4#.wly1efig4) for why tap.
+- [precommit hook](https://www.npmjs.com/package/pre-commit), helps with avoiding broken commits
+- [browserstack](https://github.com/vigour-io/boilerplate-module/blob/master/test/browserstack.json)
+- coveralls.io
+- [travis-ci](https://github.com/vigour-io/boilerplate-module/blob/master/.travis.yml)
 
 In test if tests are reusable use a `fn.js` file
 

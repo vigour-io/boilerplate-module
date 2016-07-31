@@ -1,7 +1,0 @@
-.play-player-controls > .progress {
-  font-size: var(--player-controls-font-size);
-}
-
-.advertisement .play-player-controls > .progress {
-  display: none;
-}
