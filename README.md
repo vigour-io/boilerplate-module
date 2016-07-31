@@ -32,7 +32,7 @@ Before you start be sure you have knowledge about
 ###Code
 Use [jstandard as code style](http://standardjs.com/).
 
-As a rule of thumb your js should run in the browser and nodejs if possible, [universal javascript](https://medium.com/@mjackson/universal-javascript-4761051b7ae9#.l9dabsnam). 
+As a rule of thumb your js should run in the browser and nodejs if possible, [universal javascript](https://medium.com/@mjackson/universal-javascript-4761051b7ae9#.l9dabsnam).
 For example, when you have a c++ websocket server this will not run in the browser
 
 
@@ -150,7 +150,7 @@ require('vigour-util/require')()
 -
 ###Server
 To start a server use `npm start` with no arguments
-To launch a server for testing puposes you can use `now`, they map port 80 to https by default.
+To launch a server for testing puposes you can use [now](https://zeit.co/now), they map port 80 to https by default.
 
 - Add your start script in a bin folder `bin/server.js`, this way you ensure that your module is allways usable programaticly
 - Do not add to many arguments to your start script, in general having one argument that is the port should be enough for development
