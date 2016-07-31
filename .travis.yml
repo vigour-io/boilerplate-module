@@ -10,3 +10,9 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 notifications:
   email: false
+deploy:
+  provider: npm
+  email: $(node -p "JSON.parse(require('fs').readFileSync('./package.json').toString()).contributors[0]")
+  on:
+    branch: master
+    tags: true

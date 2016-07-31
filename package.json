@@ -52,8 +52,8 @@
     "DOM"
   ],
   "contributors": [
-    "Youri Daamen <youri@vigour.io>",
-    "Jim de Beer <jim@vigour.io>"
+    "Jim de Beer <jim@vigour.io>",
+    "Youri Daamen <youri@vigour.io>"
   ],
   "browserify": {
     "transform": [
