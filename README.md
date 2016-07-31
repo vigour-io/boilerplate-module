@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/vigour-io/boilerplate-module/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/boilerplate-module?branch=master)
 
 A boilerplate of how to do modules
+- prerequisite
 - code
 - directory
 - tests
@@ -18,6 +19,13 @@ A boilerplate of how to do modules
 - committing
 - publishing
 - readme
+
+-
+###Prerequisite
+Before you start doing development @ vigour be sure you have knowledge about
+- [node.js 6.3](http://nodeschool.io/)
+- [es6](https://github.com/lukehoban/es6features)
+- [browserify](http://browserify.org/articles.html)
 
 -
 ###Code
