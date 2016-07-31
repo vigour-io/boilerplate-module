@@ -13,6 +13,7 @@
     "url": "https://github.com/vigour-io/boilerplate-module/issues"
   },
   "scripts": {
+    "deploy": "echo bla",
     "start": "node bin/server.js",
     "test": "(ducktape; node test) | tap-difflet && standard",
     "standard": "standard",
@@ -22,7 +23,7 @@
     "watch": "nodemon test | tap-difflet",
     "watch-browser": "budo ./test/index.js:bundle.js -d ./test --css test/bundle.css --pushstate --live -- -r ./package.json:package.json"
   },
-  "dependencies": {
+  "xdependencies": {
     "now": "0.19.0"
   },
   "noDependencies2": {
