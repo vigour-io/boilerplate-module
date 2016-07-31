@@ -33,7 +33,7 @@ Before you start be sure you have knowledge about
 Use [jstandard as code style](http://standardjs.com/).
 
 As a rule of thumb your js should run in the browser and nodejs if possible, [universal javascript](https://medium.com/@mjackson/universal-javascript-4761051b7ae9#.l9dabsnam).
-For example, when you have a c++ websocket server this will not run in the browser
+Aan exception would be for example, a c++ websocket server, this will not run in the browser!
 
 
 Use es6 everywhere, always add a browserify transform using babel in your package.json. Except in the rare case where you're code cant run in the browser
@@ -151,7 +151,7 @@ To start a server use `npm start` with no arguments
 To launch a server for testing puposes you can use [now](https://zeit.co/now), they map port 80 to https by default.
 
 - Add your start script in a bin folder `bin/server.js`, this way you ensure that your module is allways usable programaticly
-- Do not add to many arguments to your start script, in general having one argument that is the port should be enough for development
+- Do not add too many arguments to your start script, in general having one argument that is the port should be enough for development
 - Prefer errors over logs, throw Errors. In most cases where you use`vigour-state` the whole state will be stored in a database, this means every error is reproducable by replaying the history
 - Dont add too many `dev-tools` to your server, custom cli tools, too many fancy colorts in the console
 - For notifications make a slack channel for your service (e.g. service crashed, new version launched)
