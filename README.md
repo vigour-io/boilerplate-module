@@ -121,6 +121,9 @@ don't tests internals test api with results (input - output), this allows you to
 
 --
 ###Browser
+
+[List of supported browsers](https://github.com/vigour-io/guidelines/blob/master/README.md#supported-browsers)
+
 Browsers should be able to run allmost all code, universal modules using browserify
 - Use feature detection in browsers
 - Make sure to test your module in multiple browsers, browserstack tests are very helpfull for this
@@ -208,6 +211,9 @@ always use the carret `^2.0.0` for dependencies, this updates minor and patch ve
 
 -
 ###Naming
+
+[Repo Naming Conventions](https://github.com/vigour-io/guidelines/blob/master/README.md#repo-naming-conventions)
+
 Try to be broing but concise with names `play-state-content`
 - `play`, the product the module is part of
 - `state`, the subtopic (state)
@@ -222,6 +228,9 @@ Modules should always be installable using
 
 -
 ###Commiting
+
+[Git Workflow Guidelines](https://github.com/vigour-io/guidelines/blob/master/README.md#git-workflow)
+
 Commit to feature branches, there is no develop branch only master and feature, use pull requests even to yourself to merge features into master. Similair model as git flow, minus the develop branch. Reason to remove a devleop branch is to get less version disparity
 
 --
