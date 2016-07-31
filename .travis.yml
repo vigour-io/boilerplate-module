@@ -5,7 +5,7 @@ git:
 matrix:
   include:
   - node_js: '6.3'
-    script: npm run browserstack
+    script: npm run travis
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 notifications:

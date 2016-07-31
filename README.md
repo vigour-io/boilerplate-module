@@ -25,7 +25,7 @@ Use [jstandard as code style](http://standardjs.com/).
 
 As a rule of thumb your js should run in the browser and nodejs if possible, [universal javascript](https://medium.com/@mjackson/universal-javascript-4761051b7ae9#.l9dabsnam).
 
-Use es6 everywhere, allways add a browserify transform using babel in your package.json. Except in the rare case where you're code cant run in the browser
+Use es6 everywhere, always add a browserify transform using babel in your package.json. Except in the rare case where you're code cant run in the browser
 ```
 "browserify": {
   "transform": [
@@ -42,7 +42,7 @@ Use es6 everywhere, allways add a browserify transform using babel in your packa
 ```
 
 When there is a difference between the browser and node use the browserify-browser field.
-`/index.js` is allways the node-js file and `/browser.js` is the exception
+`/index.js` is always the node-js file and `/browser.js` is the exception
 ```
 "browser": {
   "./lib/something/index.js": "./lib/something/browser.js"
@@ -50,7 +50,7 @@ When there is a difference between the browser and node use the browserify-brows
 ```
 
 - Use `val` as a word vs `value`
-- Allways add `use strict` on top of your js files
+- Always add `use strict` on top of your js files
 - Try to create small concise functions preferbly split up into many files
 - Use streams as much as possible when working in node (chunk based operation)
 - When using promises make sure you catch errors!
@@ -62,7 +62,7 @@ When there is a difference between the browser and node use the browserify-brows
 
 -
 ###Directory
-Allways use a `lib` folder, with the `./lib/index.js` as a main file
+Always use a `lib` folder, with the `./lib/index.js` as a main file
 
 If files are requirable as an api add entry points in the root of the repo
 ```javascript
@@ -86,7 +86,7 @@ Create tests using
 
 In test if tests are reusable use a `fn.js` file wrapping the tests in a function
 
-- Test as if youre working against a blackbox, youre tests need to do the same as users of modules
+- Test as if you're working against a blackbox, you're tests need to do the same as users of modules
 don't tests internals test api with results (input - output), this allows you to refactor code many times and does not get you lost with too many tests
 - Do not tests things that are not part of your module e.g `module a` uses `module b`, do not test the funcionality of `module b`, do this in `module b`. This keeps tests concise and more valuable
 - Coverage is an indicator of normal tests as a rule of thumb when you have 90% coverage it shows that there are some tests. Beware, coverage does not mean that your tests are any good!
@@ -94,7 +94,8 @@ don't tests internals test api with results (input - output), this allows you to
 - Use `npm run watch` (located in the script folder) for fast development in node
 - Use `npm run watch-browser` to develop for the browser
 
--
+When using browserstack you need to set the environment vars `BROWSERSTACK_USERNAME=${username}` and `BROWSERSTACK_KEY=${key}`. Set these both locally and in your projects Travis settings.
+
 ###Browser
 Browsers should be able to run allmost all code, universal modules using browserify
 - Use feature detection in browsers
@@ -136,7 +137,7 @@ To launch a server for testing puposes you can use `now`, they map port 80 to ht
 
 -
 ###Modules
-Allways use specific modules e.g. `lodash.merge` vs `lodash`
+Always use specific modules e.g. `lodash.merge` vs `lodash`
 When you find a module make sure it works in `node 6.3`, and does not add too much code in the browser
 Prefer plain simple javascript, micro modules are ok as long as they do 1 thing simply, try to avoid adding too many large modules since it will bloat your code
 
@@ -176,7 +177,7 @@ Use semver all the way this means
 - `0.x.0` *minor* for added features
 - `0.0.x` *patch* for internal changes or bug fixes
 
-allways use the carret `^2.0.0` for dependencies, this updates minor and patch version automaticly
+always use the carret `^2.0.0` for dependencies, this updates minor and patch version automaticly
 
 -
 ###Naming
@@ -185,11 +186,11 @@ Try to be broing but concise with names `play-state-content`
 - `state`, the subtopic (state)
 - `content`, the specific funcitonality
 
-Extensions of modules allways folow the same pattern e.g. `blend-state-content-brightcove` extends or replaces `play-state-content` This will keep reasoning about behaviours of modules simple for everyone
+Extensions of modules always folow the same pattern e.g. `blend-state-content-brightcove` extends or replaces `play-state-content` This will keep reasoning about behaviours of modules simple for everyone
 
 -
 ###Installation
-Modules should allways be installable using
+Modules should always be installable using
 `npm i` or `npm i --production` (wihtout dev dependencies)
 
 -
