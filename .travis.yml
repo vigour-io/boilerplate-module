@@ -5,14 +5,18 @@ git:
 matrix:
   include:
   - node_js: '6.3'
-    script: echo "hello"
+    script: npm run travis
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
-  - echo "{\"email\":\"jim@vigour.io\",\"token\":\"${NOW_TOKEN}\"}" > .now.json
+  - echo "{ "email": "jim@vigour.io", "token": \"${NOW_TOKEN}\" }" > .now.json
 notifications:
   email: false
 deploy:
-  provider: script
-  script: script.sh
-  on:
-    branch: master
+  - provider: npm
+    email: jim@vigour.io
+    api_key: ${NPM_TOKEN}
+    on:
+      branch: master
+      tags: true
+after_deploy:
+  - now -N
