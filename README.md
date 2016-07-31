@@ -86,6 +86,9 @@ Create tests using
 
 In test if tests are reusable use a `fn.js` file wrapping the tests in a function
 
+
+- Enable your repo in travis by going to the [pubic-profile](https://travis-ci.org/profile/vigour-io) for public modules and the [private profile](https://travis-ci.com/profile/vigour-io) for private modules, then click the sync button and check the box for your repo
+- Enable coveralls.io by going to [add new repo](https://coveralls.io/repos/new)
 - Test as if you're working against a blackbox, you're tests need to do the same as users of modules
 don't tests internals test api with results (input - output), this allows you to refactor code many times and does not get you lost with too many tests
 - Do not tests things that are not part of your module e.g `module a` uses `module b`, do not test the funcionality of `module b`, do this in `module b`. This keeps tests concise and more valuable
