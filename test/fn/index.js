@@ -7,7 +7,7 @@ module.exports = function () {
   if (isNode) {
     require('vigour-util/require')()
   }
-  require('./style.css')
+  require('../style.css')
 
   require('./server')()
 
