@@ -33,7 +33,7 @@ Before you start be sure you have knowledge about
 Use [jstandard as code style](http://standardjs.com/).
 
 As a rule of thumb your js should run in the browser and nodejs if possible, [universal javascript](https://medium.com/@mjackson/universal-javascript-4761051b7ae9#.l9dabsnam).
-For example, when you have a c++ websocket server this will not run in the browser
+Aan exception would be for example, a c++ websocket server, this will not run in the browser!
 
 
 Use es6 everywhere, always add a browserify transform using babel in your package.json. Except in the rare case where you're code cant run in the browser
