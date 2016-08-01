@@ -179,7 +179,7 @@ Prefer plain simple javascript, micro modules are ok as long as they do 1 thing 
 - All modules that "help" with logging for the server
 
 **prefered**
-- `uWebsocket` over `ws` or `websocket` (`uWebsocket` is by fat the fastest)
+- `uWebsocket` over `ws` or `websocket` (`uWebsocket` is by far the fastest)
 - `vigour-ua` for ua sniffing/device info (its a small module ~1kb)
 
 
