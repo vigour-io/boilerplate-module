@@ -19,4 +19,4 @@ deploy:
       tags: true
 after_deploy:
   - echo "{"email":"jim@vigour.io","token":\"${NOW_TOKEN}\"}" > ~/now.json
-  - ehco "this will deploy your server using ploy-task-now stay tuned!"
+  - echo "this will deploy your server using ploy-task-now stay tuned!"
