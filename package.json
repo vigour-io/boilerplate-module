@@ -19,7 +19,7 @@
     "standard": "standard",
     "browserstack": "browserify node_modules/browserstack-tape-reporter test -o test/bundle.js -r ./package.json:package.json && cd test && browserstack-runner | tap-difflet",
     "cover": "istanbul cover --report none --print detail test/index.js",
-    "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && standard",
+    "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && standard && npm run browserstack",
     "watch": "nodemon test | tap-difflet",
     "watch-browser": "budo ./test/index.js:bundle.js -d ./test --css test/bundle.css --pushstate --live -- -r ./package.json:package.json"
   },
