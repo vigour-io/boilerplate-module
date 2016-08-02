@@ -13,7 +13,7 @@
     "url": "https://github.com/vigour-io/boilerplate-module/issues"
   },
   "scripts": {
-    "deploy": "echo blaaaaarx",
+    "deploy": "echo comes soon needs ploy-task-runner",
     "start": "node bin/server.js",
     "test": "(ducktape; node test) | tap-difflet && standard",
     "standard": "standard",
