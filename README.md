@@ -203,7 +203,7 @@ Use envivfy to expose environment variables in your module in the browser
 --
 ###Versioning
 Use semver all the way this means
-- `x.0.0` *major*  api changes
+- `x.0.0` *major*  api changes, or everytime changes break backwards compatibility
 - `0.x.0` *minor* for added features
 - `0.0.x` *patch* for internal changes or bug fixes
 
