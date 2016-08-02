@@ -106,6 +106,8 @@ When using browserstack you need to set the environment vars `BROWSERSTACK_USERN
 
 For now you need to set `NOW_TOKEN` environment variable in Travis
 
+
+- When creating ui components try to use tests as your go to place to develop the component, run `npm run watch-browser` as defined in the scripts field of this module, same goes for the node.js but then use `npm run watch` 
 - Enable your repo in travis by going to the [pubic-profile](https://travis-ci.org/profile/vigour-io) for public modules and the [private profile](https://travis-ci.com/profile/vigour-io) for private modules, then click the sync button and check the box for your repo
 - Set enviroment variables in travis in the [repo settings](https://travis-ci.org/vigour-io/boilerplate-module/settings)
 - Enable coveralls.io by going to [add new repo](https://coveralls.io/repos/new)
