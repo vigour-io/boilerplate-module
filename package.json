@@ -1,16 +1,16 @@
 {
-  "name": "vigour-boilerplate-module",
-  "description": "A boilerplate of how to do modules",
+  "name": "blend-state-dynamo",
+  "description": "Dynamo DB integration for use with vigour-state",
   "version": "0.0.13",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vigour-io/boilerplate-module.git"
+    "url": "https://github.com/vigour-io/blend-state-dynamo.git"
   },
   "author": "vigour.io <dev@vigour.io>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vigour-io/boilerplate-module/issues"
+    "url": "https://github.com/vigour-io/blend-state-dynamo/issues"
   },
   "scripts": {
     "deploy": "echo comes soon needs ploy-task-runner",
@@ -47,7 +47,7 @@
     "browserify": "^13.1.0",
     "now": "0.19.0"
   },
-  "homepage": "https://github.com/vigour-io/boilerplate-module",
+  "homepage": "https://github.com/vigour-io/blend-state-dynamo",
   "keywords": [
     "brisky",
     "player",
@@ -60,7 +60,6 @@
   "browserify": {
     "transform": [
       "envify",
-      "postcssify",
       [
         "babelify",
         {
