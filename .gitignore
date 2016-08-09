@@ -21,7 +21,6 @@ resultlog.txt
 .npmrc
 README.html
 coverage
-browserstack.json
 browserstack-run.pid
 .now.json
 temp.yml
