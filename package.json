@@ -35,7 +35,7 @@
   "devDependencies": {
     "vigour-util": "^3.0.0",
     "browserstack-runner": "^0.4.4",
-    "browserstack-tape-reporter": "git+https://github.com/vigour-io/browserstack-tape-reporter.git",
+    "browserstack-tape-reporter": "^1.10",
     "budo": "^8.2.2",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
