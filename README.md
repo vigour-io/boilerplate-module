@@ -54,6 +54,29 @@ Use es6 everywhere, always add a browserify transform using babel in your packag
 }
 ```
 
+When using fancy features like promises be sure to include a transform that adds the feature
+
+```
+"browserify": {
+  "transform": [
+    [
+      "babelify",
+      {
+        "plugins": [
+          "transform-promise-to-bluebird",
+          "transform-runtime"
+        ],
+        "presets": [
+          "es2015"
+        ]
+      }
+    ]
+  ]
+}
+```
+
+We use the bluebirtd transform since it's the best
+
 When there is a difference between the browser and node use the browserify-browser field.
 `/index.js` is always the node-js file and `/browser.js` is the exception
 ```
