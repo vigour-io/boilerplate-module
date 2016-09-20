@@ -24,7 +24,7 @@ A boilerplate of how to do modules
 --
 ###Prerequisite
 Before you start be sure you have knowledge about
-- [node.js 6.3](http://nodeschool.io/)
+- [node.js 6.6](http://nodeschool.io/)
 - [es6](https://github.com/lukehoban/es6features)
 - [browserify](http://browserify.org/articles.html)
 - [github](https://guides.github.com/activities/hello-world/)
@@ -54,6 +54,29 @@ Use es6 everywhere, always add a browserify transform using babel in your packag
 }
 ```
 
+When using fancy features like promises be sure to include a transform that adds the feature
+
+```
+"browserify": {
+  "transform": [
+    [
+      "babelify",
+      {
+        "plugins": [
+          "transform-promise-to-bluebird",
+          "transform-runtime"
+        ],
+        "presets": [
+          "es2015"
+        ]
+      }
+    ]
+  ]
+}
+```
+
+We use the bluebirtd transform since it's the best
+
 When there is a difference between the browser and node use the browserify-browser field.
 `/index.js` is always the node-js file and `/browser.js` is the exception
 ```
@@ -75,6 +98,14 @@ When there is a difference between the browser and node use the browserify-brows
 - Use streams as much as possible when working in node (chunk based operation), to learn about streams check [stream-adventure](https://github.com/substack/stream-adventure)
 - When using `vigour-base` use inject with plain objects
 - Don't overcomlicate things with reusability, as a rule of thumb when something is done 3 times make something for it but not before
+
+
+--
+###Logs
+Never use `console.log` in production logs are only for developing
+
+- If you want to log an error try to integrate it to a service like `slack`
+- When using state use `state.root.emit('error', err)`
 
 
 --
@@ -217,7 +248,7 @@ always use the carret `^2.0.0` for dependencies, this updates minor and patch ve
 
 [Repo Naming Conventions](https://github.com/vigour-io/guidelines/blob/master/README.md#repo-naming-conventions)
 
-Try to be broing but concise with names `blend-state-content`
+Try to be boring but concise with names `blend-state-content`
 - `blend`, the product the module is part of
 - `state`, the subtopic (state)
 - `content`, the specific funcitonality
