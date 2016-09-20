@@ -101,6 +101,14 @@ When there is a difference between the browser and node use the browserify-brows
 
 
 --
+###Logs
+Never use `console.log` in production logs are only for developing
+
+- If you want to log an error try to integrate it to a service like `slack`
+- When using state use `state.root.emit('error', err)`
+
+
+--
 ###Directory
 Always use a `lib` folder, with the `./lib/index.js` as a main file
 
