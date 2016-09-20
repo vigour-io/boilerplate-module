@@ -248,7 +248,7 @@ always use the carret `^2.0.0` for dependencies, this updates minor and patch ve
 
 [Repo Naming Conventions](https://github.com/vigour-io/guidelines/blob/master/README.md#repo-naming-conventions)
 
-Try to be broing but concise with names `blend-state-content`
+Try to be boring but concise with names `blend-state-content`
 - `blend`, the product the module is part of
 - `state`, the subtopic (state)
 - `content`, the specific funcitonality
