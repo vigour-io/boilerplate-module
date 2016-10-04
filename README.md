@@ -75,7 +75,7 @@ When using fancy features like promises be sure to include a transform that adds
 }
 ```
 
-We use the bluebirtd transform since it's the best
+We use the bluebird transform since it's the best
 
 When there is a difference between the browser and node use the browserify-browser field.
 `/index.js` is always the node-js file and `/browser.js` is the exception
