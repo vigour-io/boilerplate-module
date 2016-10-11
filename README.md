@@ -38,38 +38,25 @@ As a rule of thumb your js should run in the browser and nodejs if possible, [un
 An exception would be for example, a c++ websocket server, this will not run in the browser!
 
 
-Use es6 everywhere, always add a browserify transform using babel in your package.json. Except in the rare case where you're code cant run in the browser
+Use es6 everywhere, always add a browserify transform using bubleify in your package.json. Except in the rare case where you're code can't run in the browser
+
+We use [bublé](https://www.npmjs.com/package/buble) since it's arround 10x faster then babel and installs
+
 ```
 "browserify": {
-  "transform": [
-    [
-      "babelify",
-      {
-        "presets": [
-          "es2015"
-        ]
-      }
-    ]
-  ]
+  "transform": [ "bubleify" ]
 }
 ```
 
 When using fancy features like promises be sure to include a transform that adds the feature
+use `promise-bluebird` for promises
 
 ```
 "browserify": {
   "transform": [
     [
-      "babelify",
-      {
-        "plugins": [
-          "transform-promise-to-bluebird",
-          "transform-runtime"
-        ],
-        "presets": [
-          "es2015"
-        ]
-      }
+      "bubleify",
+      "promise-bluebird"
     ]
   ]
 }
