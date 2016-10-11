@@ -24,7 +24,7 @@
     "dev-browser": "budo ./test/index.js:bundle.js -d ./test --css test/bundle.css --pushstate --live"
   },
   "dependencies": {
-    "bubleify ": "0.5.3",
+    "bubleify ": "0.5.1",
     "envify": "^3.4.0",
     "postcssify": "^2.1.1"
   },
