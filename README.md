@@ -214,7 +214,7 @@ Use envivfy to expose environment variables in your module in the browser
 ```
 "browserify": {
   "transform": [
-    "envivy"
+    "envify"
   ]
 }
 ```
