@@ -79,15 +79,15 @@ When there is a difference between the browser and node use the browserify-brows
 - When using es7 make sure it works in node as well (by babelifying your code)
 
 **recommendations**
-- Try to create small concise functions preferbly split up into many files
+- Try to create small concise functions preferably split up into many files
 - Use streams as much as possible when working in node (chunk based operation), to learn about streams check [stream-adventure](https://github.com/substack/stream-adventure)
 - When using `vigour-base` use inject with plain objects
-- Don't overcomlicate things with reusability, as a rule of thumb when something is done 3 times make something for it but not before
+- Don't overcomplicate things with reusability, as a rule of thumb when something is done 3 times make something for it - but not before
 
 
 --
 ###Logs
-Never use `console.log` in production logs are only for developing
+Never use `console.log` in production logs - only for developing
 
 - If you want to log an error try to integrate it to a service like `slack`
 - When using state use `state.root.emit('error', err)`
@@ -130,7 +130,7 @@ For now you need to set `NOW_TOKEN` environment variable in Travis
 - Enable coveralls.io by going to [add new repo](https://coveralls.io/repos/new)
 - Test as if you're working against a blackbox, you're tests need to do the same as users of modules
 don't tests internals test api with results (input - output), this allows you to refactor code many times and does not get you lost with too many tests
-- Do not tests things that are not part of your module e.g `module a` uses `module b`, do not test the funcionality of `module b`, do this in `module b`. This keeps tests concise and more valuable
+- Do not tests things that are not part of your module e.g `module a` uses `module b`, do not test the functionality of `module b`, do this in `module b`. This keeps tests concise and more valuable
 - Coverage is an indicator of normal tests as a rule of thumb when you have 90% coverage it shows that there are some tests. Beware, coverage does not mean that your tests are any good!
 - When developing start makeing unit tests, this is your spec from there you can start building the app code, see tests as the tool you develop with, this pattern is called [TDD](https://www.agilealliance.org/glossary/tdd/)
 - Use `npm run watch` (located in the script folder) for fast development in node
@@ -149,7 +149,7 @@ Browsers should be able to run allmost all code, universal modules using browser
 
 **css**
 
-Css4 with [postcssify](https://www.npmjs.com/package/postcssify) a transform for cssnext for browserify
+CSS4 with [postcssify](https://www.npmjs.com/package/postcssify) a transform for cssnext for browserify
 ```
 "browserify": {
   "transform": [
@@ -190,8 +190,8 @@ When you find a module make sure it works in `node 6.3`, and does not add too mu
 Prefer plain simple javascript, micro modules are ok as long as they do 1 thing simply, try to avoid adding too many large modules since it will bloat your code
 
 **blacklist**
-- `momment-js`, to large for the client can be replaced with `new Date()` for most usecases
-- `async` don't need this , use es7 `async functions` with `await`
+- `moment-js`, to large for the client can be replaced with `new Date()` for most usecases
+- `async`, we don't need this , use es7 `async functions` with `await`
 - `express` use plain old `http`
 - `hyperquest` use plain old `http`
 - `request` use plain old `http`
@@ -226,7 +226,9 @@ Use semver all the way this means
 - `0.x.0` *minor* for added features
 - `0.0.x` *patch* for internal changes or bug fixes
 
-always use the carret `^2.0.0` for dependencies, this updates minor and patch version automaticly
+always use the caret `^2.0.0` for dependencies, this updates minor and patch version automaticly
+
+note: keep in mind that when starting from below 1.0.0, you will manually need to update dependencies wherever you add them. this is caused by npm catering to the inherit nature of alpha/beta code.
 
 -
 ###Naming
@@ -243,7 +245,7 @@ Extensions of modules always folow the same pattern e.g. `blend-state-content-br
 --
 ###Installation
 Modules should always be installable using
-`npm i` or `npm i --production` (wihtout dev dependencies)
+`npm i` or `npm i --production` (without dev dependencies)
 
 -
 ###Commiting
